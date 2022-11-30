@@ -1,0 +1,806 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+body{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 4000;
+}
+nav.sticky{
+    background: black;
+}
+nav{
+    transition: 0.7s;
+    position: fixed;
+    width: 100%;
+    height: 5.6em;
+    overflow: hidden;
+}
+nav ul{
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    z-index: 2;
+}
+nav ul li{
+    display: inline-block;
+    padding: 34px 40px 20px 0px;
+    z-index: 2;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: white;
+}
+nav ul li a:hover{
+    color: white;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+hr {
+    margin: 40px;
+    background-color: white;
+    height: 1px;
+    border: none;
+}
+.bigbr{
+    margin: 20px;
+}
+.whiteback{
+    background-color: white;
+    color: black;
+}
+.blackback{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.darkgreyback{
+    background-color: rgb(90, 90, 90);
+    color: white;
+}
+.greyback{
+    background-color: rgb(209, 209, 209);
+    color: black;
+}
+.roundedpic{
+    border-radius: 50%;
+}
+.references li {
+    padding: 5px;
+    line-height: 40px;
+}
+.references li a{
+    color: black;
+}
+.blackback .references li a{
+    color: white;
+}
+.references li a:hover{
+    color: white;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+.logo{
+    float: left;
+    position: fixed;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 16px 36px;
+    vertical-align: middle;
+}
+.main-wrapper{
+    min-height: 100%;
+    overflow: auto;
+}
+.center-wrapper{
+    min-height: 1743;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+.center-text{
+    padding: 10px;
+    min-height: 1743;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: justify;
+    font-weight: 100;
+    line-height: 30px;
+    font-size: 20px;
+}
+.pagebanner{
+    background-color: #1A1A1A;
+    color: white;
+    font-size: xx-large;
+    position: relative;
+    text-align: center;
+}
+.climatechangetag{
+    font-size: 22px;
+    font-weight: 600;
+}
+.imgbanner{
+    width:100%;
+    height:623px;
+    object-fit: cover;
+    overflow: hidden;
+    opacity: 80%;
+}
+.imgbanner1{
+    width:100%;
+    height:150px;
+    object-fit: cover;
+    overflow: hidden;
+    opacity: 80%;
+}
+.bannertext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+.bannertitle{
+    text-shadow: -3px 3px 0px #000000;
+    font-size: 1.8em;
+}
+.bannerblurb{
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+.button1 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 250px;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  text-decoration: none;
+}
+.button1:hover,
+.button1:focus {
+  opacity: .75;
+}
+.newsletter-button{
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px;
+    margin-top: 30px;
+    display: inline-flex;
+    flex: 1 1 auto;
+    padding: 1rem 2rem;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.newsletter-button:disabled {
+  pointer-events: none;
+}
+
+.newsletter-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.newsletter-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.footer{
+    background-color: rgb(48, 48, 48);
+    height: 375px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.footer-content{
+    background-color: rgb(48, 48, 48);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-section{
+    flex: 1;
+    height: 100%;
+    width: 33%;
+    padding: 20px;
+}
+.abouttext{
+    text-align: center;
+    width: 95%;
+}
+
+.footer .footer-bottom {
+    background-color: rgb(121, 121, 121);
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 10px;
+    font-size: 13px;
+}
+.socialtitle{
+    font-size: 25px;
+    padding: 10px;
+}
+.contacttitle{
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+.contact div{
+    padding-bottom: 10px;
+}
+.socialmedia{
+    display: inline-block;
+    padding: 10px 20px;
+}
+.newslettertitle{
+    font-size: 25px;
+    padding: 10px;
+}
+.newslettertext{
+    font-size: 17px;
+    height: 50px;
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    color: rgb(48, 48, 48);
+    text-indent: 20px;
+}
+.greenhousegas, .humanact{
+    display: flex;
+}
+.greenhousegas-picture{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.greenhousegas-picture figure figcaption{
+    padding-top: 10%;
+    font-size: 25px;
+}
+.greenhousegas-text{
+    font-weight: 100;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 2%;
+    margin-right: 4%;
+    line-height: 30px;
+    font-size: 20px;
+}
+.humanact-pic{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+}
+.humanact-text{
+    font-weight: 100;
+    width: 70%;
+    text-align: justify;
+    padding: 2%;
+    margin-right: 4%;
+    line-height: 30px;
+    font-size: 20px;
+}
+.centerimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.effect-table{
+    border-collapse:separate; 
+}
+.effect-table-cell{
+    padding: 0%;
+    width: 50%;
+    margin: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.effect-table-row{
+    height: 55vh;
+    margin: 0px;
+    padding: 0%;
+    border-spacing: 0px;
+    color: white;
+}
+.effect-table-row:first-child{
+    background-color: #768792;
+}
+.effect-table-row:nth-child(2){
+    background-color: #8f5f49;
+}
+.effect-table-row:nth-child(3){
+    background-color: #576574;
+}
+.effect-table-row:nth-child(4){
+    background-color: #5e5753;
+}
+.half-word{
+    padding: 10px 50px 10px 50px;
+    text-align: justify;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.collage{
+    height: fit-content;
+}
+.collage2{
+    display: flex;
+    height: 400px;
+}
+.collage2 div {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collage-row1{
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 509px;
+}
+.college-cell1{
+    width: 45%;
+    float: left;
+}
+.college-cell1 img{
+    float: right;
+    padding-right: 30px;
+}
+.college-cell2{
+    position: relative;
+    width: 55%;
+    float: right;
+    z-index: 0;
+}
+.college-cell2 img{
+    position: absolute;
+    padding-bottom: 30px;
+    left: 0;
+    bottom: 0;
+}
+.collage-row2{
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+}
+.college-cell3{
+    width: 45%;
+    float: left;
+}
+.college-cell4{
+    width: 55%;
+    float: right;
+}
+.contactusbutton {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    color: black;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.contactusbutton:hover{
+    box-shadow: #cacaca 0 0 0 3px, transparent 0 0 0 0;
+    color: rgb(0, 0, 0);
+    text-shadow: 1.5px 1.5px #cacaca;
+}
+.contactus-wrapper{
+    height: 100%;
+    background-image: url(photos/contactuswallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactusbox{
+    margin: 300px 20px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    border-radius: 6px;
+    padding: 20px 60px 40px 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+.contact-left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    margin-top: 15px;
+    position: relative;
+}
+.contactusfooterlink{
+    text-decoration: none;
+    color: white;
+}
+.emailinfo, .phoneinfo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.emailinfo p, .phoneinfo p{
+    color: #556b7e;
+}
+.contact-right{
+    width: 70%;
+}
+.contact-right h2{
+    font-size: 27px;
+    margin-bottom: -5px;
+    color: #2c90b0;
+}
+.contact-right p{
+    color: #042139;
+    font-weight: 100;
+    text-align: justify;
+}
+.contact-right .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+.contact-right .input-box input,
+.contact-right .input-box textarea{
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    background: #d4f5ff;
+    border-radius: 7px;
+    padding: 0 15px;
+    resize: none;
+}
+.contact-right .message-box{
+    min-height: 110px;
+}
+.contact-right .input-box textarea{
+    padding-top: 15px;
+}
+.contact-right button{
+    display: inline-block;
+    margin-top: 20px;
+}
+.contact-right .button button[type="submit"]{
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #2c90b0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button button[type="submit"]:hover{
+    background: #0f5779;
+}
+.vl {
+    margin-right: 50px;
+    border-left: 3px solid #96b5c0;
+    height: 250px;
+}
+.index-page-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    animation: change 40s ease-in infinite;
+}
+.index-page-fade{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2), rgba(0,0,0,0.5),rgba(0,0,0,1));
+}
+.main-page-words{
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88%;
+    width: 50%;
+    color: white;
+    flex-direction: column;
+}
+.main-page-title{
+    font-size: 50px;
+    width: 100%;
+    text-align: left;
+    margin: -80px;
+}
+.main-page-words p{
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    width: 100%;
+}
+.center-index-text{
+    min-height: 1743;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    text-align: center;
+}
+.center-index-text h1{
+    font-size: 50px;
+}
+.center-index-text p{
+    padding: 25px;
+    font-weight: 300;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
+.index-buttons-section{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,0.3),rgba(0,0,0,1)), url(photos/earthfromstation.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index-buttons-section a:visited , .effectspan:visited{
+    text-decoration: none;
+    color: white;
+}
+.index-buttons-section a:active, .effectspan:active{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.548);
+}
+.effectspan:hover{
+    color: rgba(80, 207, 55, 0.877);
+}
+.index-buttons-section div{
+    min-width: 200px;
+    max-width: 400px;
+    height: 270px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 25px;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid rgba(255, 255, 255, 0.74);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+}
+.index-buttons-section div:hover {
+    transform: translateY(-10px);
+    animation: float 6s ease-in-out infinite;
+}
+.index-buttons-section div h3{
+    font-size: 21px;
+}
+.card-causes{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(photos/factorybanner.jpg);
+}
+.card-effects{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(photos/wildfirebanner.jpg);
+}
+.card-solutions{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(photos/windturbinebanner.jpg);
+}
+.why-section{
+    min-height: 1743;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    display: flex;
+    padding: 70px 20px;
+    justify-content: center;
+    align-items: center;
+}
+.why-section div{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.why-text p, .makeachangetext p{
+    font-weight: 300;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
+.makeachange-section{
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.3), rgba(0,0,0,0.3),rgb(48, 48, 48,0.3)), url(photos/spacenight.jpg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.makeachange-section-container{
+    padding: 0px 50px;
+    border-radius: 20px;
+    background-color: #0000003f;
+    margin: 250px 50px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.makeachangepic{
+    padding: 30px 15px;
+}
+.makeachangetext{
+    padding: 30px 15px;
+}
+.makeachangetext h1{
+    
+    font-size: 40px;
+    margin-bottom: -10px;
+}
+.makeachangetext h3{
+    color: rgb(255, 243, 204);
+    font-size: 25px;
+    margin-bottom: -10px;
+    animation: glow-yellow 1s ease-in-out infinite alternate;
+}
+@keyframes change{
+    0%
+    {   
+        background-image: url(photos/hero/cuttree.jpg);
+    }
+    20%
+    {
+        background-image: url(photos/hero/droughtnwater.jpg);
+    }
+    40%
+    {
+        background-image: url(photos/hero/fireinforest.jpg);
+    }
+    60%
+    {
+        background-image: url(photos/hero/firesmoke.jpg);
+    }
+    80%
+    {
+        background-image: url(photos/hero/wildfireaftermath.jpg);
+    }
+    100%
+    {
+        background-image: url(photos/hero/antarcticamelt.jpg);
+    }
+}
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 15px rgb(153, 153, 153), 0 0 20px rgb(92, 92, 92), 0 0 25px rgb(92, 92, 92), 0 0 30px rgb(92, 92, 92), 0 0 35px rgb(92, 92, 92), 0 0 40px rgb(92, 92, 92);
+    }
+    to {
+      text-shadow: 0 0 15px #fff, 0 0 20px rgb(150, 150, 150), 0 0 25px rgb(150, 150, 150), 0 0 30px rgb(150, 150, 150), 0 0 35px rgb(150, 150, 150), 0 0 40px rgb(150, 150, 150), 0 0 45px rgb(150, 150, 150);
+    }
+}
+@keyframes glow-yellow {
+    from {
+      text-shadow: 0 0 10px rgb(255, 239, 170), 0 0 15px rgb(255, 248, 209), 0 0 20px rgb(105, 98, 77), 0 0 25px rgb(105, 98, 77), 0 0 30px rgb(105, 98, 77), 0 0 35px rgb(105, 98, 77), 0 0 40px rgb(105, 98, 77);
+    }
+    to {
+      text-shadow: 0 0 15px rgb(255, 239, 170), 0 0 20px rgb(109, 106, 87), 0 0 25px rgb(109, 106, 87), 0 0 30px rgb(109, 106, 87), 0 0 35px rgb(109, 106, 87), 0 0 40px rgb(109, 106, 87), 0 0 45px rgb(109, 106, 87);
+    }
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-25px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@media (max-width: 480px){
+body, html {
+height: 100%!important;
+overflow: auto!important;
+max-height: 100% !important;
+}}
