@@ -3,7 +3,8 @@
 <head>
     <link rel="stylesheet" href="STWcss.css">
     <link rel="shortcut icon" type="image/x-icon" href="photos/STWglobe.ico" />
-    <script src="STWjs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="STWjs.js"></script>
 <title>Effects - Climate Change</title> 
 <meta charset="utf-8">
 </head>
@@ -18,7 +19,42 @@
                         <li><a href="effects.html">Effects</a></li>
                         <li><a href="solutions.html">Solutions</a></li>
                         <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="#popup" class="trigger">Sign in</a></li>
                     </ul>
+                    <div id="popup" class="overlay">
+                        <div class="popup-container">
+                            <a href="#" class="close">&times;</a>
+                            <div class="column detail">
+                                <div class="signin">
+                                    <h1>Sign In</h1>
+                                    <input type="email" id="signinemail" placeholder="Email">
+                                    <input type="password" id="signinpassword" placeholder="Password">
+                                    <div class="error"></div>
+                                    <a href="#">Forgot Password</a>
+                                    <button type="submit" class="signin-submit" onclick="signinInfo()">Sign in</button>
+                                    <span>You don't have an account yet? <button id="signup">Create it now</button></span>
+                                </div>
+                                <div class="signup">
+                                    <h1>Sign Up</h1>
+                                    <input type="name" placeholder="Full Name">
+                                    <input type="email" placeholder="Email">
+                                    <input type="password" placeholder="Password">
+                                    <button class="signin-submit">Sign up</button>
+                                    <span>Already have an account? <button id="signin">Sign in</button></span>
+                                </div>
+                            </div>
+                            <div class="column prompt">
+                                <div class="signin">
+                                    <h1>Welcome Back!</h1>
+                                    <p>To keep connected with us please login with your personal details</p>
+                                </div>
+                                <div class="signup">
+                                    <h1>Hello, Friend!</h1>
+                                    <p>Enter your personal details and fight climate change with us</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -139,10 +175,10 @@
                         <br class="bigbr">
                         <h2>References</h2>
                         <ol class="references">
-                            <li><a href="https://www.un.org/en/climatechange/science/causes-effects-climate-change">Effects of Climate Change - United Nations</a></li>
-                            <li><a href="https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-are-hurricanes-k4.html">What are Hurricanes? - National Aeronautics and Space Administration</a></li>
-                            <li><a href="https://www.worldwildlife.org/pages/six-ways-loss-of-arctic-ice-impacts-everyone">Six ways loss of Arctic ice impacts everyone - World Wildlife Fund</a></li>
-                            <li><a href="https://www.c2es.org/content/drought-and-climate-change/">Drought and Climate Change - The Center for Climate and Energy Solutions</a></li>
+                            <li><a href="https://www.un.org/en/climatechange/science/causes-effects-climate-change" target="_blank">Effects of Climate Change - United Nations</a></li>
+                            <li><a href="https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-are-hurricanes-k4.html" target="_blank">What are Hurricanes? - National Aeronautics and Space Administration</a></li>
+                            <li><a href="https://www.worldwildlife.org/pages/six-ways-loss-of-arctic-ice-impacts-everyone" target="_blank">Six ways loss of Arctic ice impacts everyone - World Wildlife Fund</a></li>
+                            <li><a href="https://www.c2es.org/content/drought-and-climate-change/" target="_blank">Drought and Climate Change - The Center for Climate and Energy Solutions</a></li>
                         </ol>
                         <br class="bigbr">
                     </div>
@@ -166,10 +202,10 @@
                     </div>
                     <div class="footer-section socials">
                         <div class="socialtitle"><span>Our Socials</span></div>
-                        <a href="" class="socialmedia"><img src="photos/facebook.png" height="50px" width="50px" alt="facebook"></a>
-                        <a href="" class="socialmedia"><img src="photos/instagram.png" height="50px" width="50px" alt="instagram"></a>
-                        <a href="" class="socialmedia"><img src="photos/twitter.png"  height="50px" width="50px" alt="twitter"></a>
-                        <a href="" class="socialmedia"><img src="photos/youtube.png"  height="50px" width="50px" alt="youtube"></a>
+                        <div class="socialmedia"><a href="https://www.facebook.com/climatescienceinfo/" target="_blank"><img src="photos/facebook.png" height="50px" width="50px" alt="facebook"></a></div>
+                        <div class="socialmedia"><a href="https://www.instagram.com/nasaclimatechange/" target="_blank"><img src="photos/instagram.png" height="50px" width="50px" alt="instagram"></a></div>
+                        <div class="socialmedia"><a href="https://twitter.com/nasaclimate" target="_blank"><img src="photos/twitter.png"  height="50px" width="50px" alt="twitter"></a></div>
+                        <div class="socialmedia"><a href="https://www.youtube.com/watch?v=LxgMdjyw8uw" target="_blank"><img src="photos/youtube.png"  height="50px" width="50px" alt="youtube"></a></div>
                         <a href="contactus.html" class="contactusfooterlink">
                             <div class="contacttitle"><span>Contact Us</span></div>
                             <div class="contact">
@@ -181,15 +217,15 @@
                     <div class="footer-section newsletter">
                         <div class="newslettertitle"><span>Get the Newsletter</span></div>
                         <br>
-                        <form action="mainpage.html" method="post">
-                            <input type="email" name="email" class="newslettertext" placeholder="enter email address">
-                            <br>
-                            <button type="submit" class="newsletter-button" value="subscribe">Subscribe</button>
+                        <form id="newsletterform" action="" method="post">
+                            <input type="email" name="email" id="subscriberemail" class="newslettertext" placeholder="enter email address">
+                            <div class="error"></div>
+                            <button type="submit" id="subscribebutton" class="newsletter-button" value="subscribe" onclick="subscriberInfo()">Subscribe</button>
                         </form>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    &copy; savetheworld.com | Designed by Fuan Zheng Nan
+                    <a style="text-decoration: none; color:white;" href="https://acefuan.github.io/">&copy; acefuan.github.io</a> | Designed by Fuan Zheng Nan
                 </div>
             </div>
         </footer>

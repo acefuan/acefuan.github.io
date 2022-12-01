@@ -3,6 +3,7 @@ window.addEventListener("scroll", function(){
     nav.classList.toggle("sticky", window.scrollY > 0);
 });
 
+
 $('.signup').hide();
 
 $('#signin, #signup').on(
@@ -34,6 +35,49 @@ function signinInfo() {
     document.getElementById("signinpassword").value = "";
 };
 
+const form = document.getElementById('contact-form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const div = document.querySelector('div');
+
+form.addEventListener('submit', event => {
+    const errors = [];
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const messageValue = message.value.trim();
+
+    if(nameValue === '') {
+        setError(name, 'Name is required');
+        errors.push('Name invalid');
+    } else {
+        setSuccess(name);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+        errors.push('Email invalid');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Invalid email address');
+        errors.push('Invalid Email');
+    } else {
+        setSuccess(email);
+    }
+
+    if(messageValue === '') {
+        setError(message, 'A message is required');
+        errors.push('Invalid Message');
+    } else {
+        setSuccess(message);
+    }
+
+    if(errors.length > 0){
+        event.preventDefault();
+    } else {
+        alert("Message Submitted! We will get back to you shortly.");
+    }
+});
+
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -41,6 +85,15 @@ const setError = (element, message) => {
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
+};
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
 };
 
 const isValidEmail = email => {
