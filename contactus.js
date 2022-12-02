@@ -1,7 +1,24 @@
+const nav = document.querySelector("nav");
+const dropdown = document.querySelector(".dropdown");
+const navmenu = document.querySelector(".nav-menu");
+
 window.addEventListener("scroll", function(){
-    var nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 });
+
+dropdown.addEventListener("click", ()=> {
+    dropdown.classList.toggle("active");
+    navmenu.classList.toggle("active");
+    if(!nav.classList.contains("sticky")){
+        nav.classList.toggle("sticky");
+    }
+});
+
+document.querySelectorAll(".nav-link").forEach(n => 
+    n.addEventListener("click", ()=> {
+        dropdown.classList.remove("active");
+        navmenu.classList.remove("active");
+}));
 
 
 $('.signup').hide();

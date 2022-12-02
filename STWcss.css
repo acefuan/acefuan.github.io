@@ -50,6 +50,19 @@ nav ul li a:hover{
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
+.dropdown{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 50px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
 hr {
     margin: 40px;
     background-color: white;
@@ -609,6 +622,8 @@ hr {
     background-position: center;
     background-size: cover;
     animation: change 40s ease-in infinite;
+    -webkit-animation: change 40s ease-in infinite;
+    -moz-animation: change 40s ease-in infinite;
 }
 .index-page-fade{
     width: 100%;
@@ -898,6 +913,8 @@ hr {
     font-weight: bold;
     cursor: pointer;
 }
+
+
 @keyframes change{
     0%
     {   
@@ -954,6 +971,7 @@ hr {
 		transform: translatey(0px);
 	}
 }
+
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
     .popup-container{
@@ -964,13 +982,7 @@ hr {
   /* For Tablet View */
   @media screen and (min-device-width: 768px)
   and (max-device-width: 1024px) {
-    p, li{
-        font-weight: 300;
-        font-size: 26px;
-    }
-    .abouttext p{
-        font-size: 20px;
-    }
+
   }
    
   /* For Mobile Portrait View */
@@ -978,50 +990,387 @@ hr {
   and (orientation: portrait) {
     p{
         font-weight: 300;
-        font-size: 26px;
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .main-page-words{
+        text-align: justify;
+    }
+    .main-page-words h1{
+        font-size: 140px;
+    }
+    .climatechangetag {
+        font-size: 40px;
+    }
+    .main-page-words p{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .center-index-text > h1:nth-child(3), .why-text h1, .makeachangetext h1{
+        margin-left: 15px;
+        font-size: 70px;
+    }
+    .why-text p, .makeachangetext p{
+        margin: 0px 15px;
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .center-index-text > p:nth-child(4){
+        margin: 0px 35px;
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .center-index-text > img:nth-child(2){
+        width: 200px;
+        height: 200px;
     }
     .abouttext p{
         font-size: 20px;
     }
-    .popup-container{
-        width: 80%;
-        flex-direction: column-reverse;
+    .index-buttons-section{
+        display: flex;
+        flex-direction: column;
     }
-    .column{
+    .index-buttons-section div h3{
+        font-size: 35px;
+    }
+    .index-buttons-section div{
+        font-size: 30px;
+        height: 400px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 20px 25px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 25px;
+        background-position: center;
+        background-size: cover;
+        border: 3px solid rgba(255, 255, 255, 0.74);
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    }
+    .why-section{
+        flex-direction: column;
+    }
+    .why-video > img:nth-child(1){
+        width: 800px;
+        height: 450px;
+    }
+    .makeachangetext h3{
+        font-size: 40px;
+        margin: 30px 15px;
+    }
+    .makeachange-section-container{
+        flex-direction: column;
+    }
+    .footer-content{
+        flex-direction: column;
+    }
+    div.footer-section{
+        height: fit-content;
+        width: 80%;
+    }
+    .footerlogo > img:nth-child(1){
+        width: 300px;
+        height: 276px;
+    }
+    .abouttext > p:nth-child(1){
+        line-height: 45px;
+        font-size: 35px;
+    }
+    .socialtitle > span:nth-child(1), .contacttitle > span:nth-child(1), .newslettertitle{
+        padding-top: 50px;
+        margin-bottom:50px;
+        font-size: 50px;
+    }
+    div.socialmedia a img{
+        height: 100px;
+        width: 100px;
+    }
+    div.center-text:nth-child(6) > h1:nth-child(2), div.humanact:nth-child(1) > div:nth-child(2) > h2:nth-child(1), div.humanact:nth-child(5) > div:nth-child(2) > h2:nth-child(1), div.humanact:nth-child(5) > div:nth-child(2) > h2:nth-child(1), div.humanact:nth-child(7) > div:nth-child(2) > h2:nth-child(1), div.humanact:nth-child(3) > div:nth-child(2) > h2:nth-child(1), div.humanact:nth-child(9) > div:nth-child(2) > h2:nth-child(1), div.center-text:nth-child(11) > h2:nth-child(2){
+        font-size: 40px;
+    }
+    .contact > div:nth-child(1) > span:nth-child(1), .contact > div:nth-child(2) > span:nth-child(1){
+        font-size: 33px;
+    }
+    .contact > div:nth-child(1) > span:nth-child(1) > img:nth-child(1){
+        width: 30px;
+        height: 30px;
+    }
+    .contact > div:nth-child(2) > span:nth-child(1) > img:nth-child(1){
+        width: 40px;
+        height: 30px;
+    }
+    .newslettertitle{
+        margin: 20px 50px;
+    }
+    #subscriberemail{
+        height: 100px;
+        font-size: 30px;
+    }
+    #subscribebutton{
+        height: 80px;
+        width: 300px;
+        font-size: 33px;
+    }
+    .footer-bottom{
+        font-size: 300px;
+    }
+    div.center-text:nth-child(1) > h1:nth-child(1), div.center-text:nth-child(2) > h1:nth-child(1){
+        font-size: 45px;
+    }
+    .references li{
+        padding: 15px 0px;
+        font-size: 27px;
+        line-height: 45px;
+    }
+    .button1{
+        border-radius: 20px;
+        font-size: 26px;
+        max-width: 400px;
+        height: 55px;
+    }
+    .imgbanner{
+        height: 70vh;
+    }
+    .bannertitle{
+        font-size: 90px;
+    }
+    .bannerblurb{
+        font-size: 35px;
+    }
+    .popup-container div{
         width: 100%;
     }
-    .close{
-        top: 10px;
-        right: -50px;
+    .popup-container{
+        flex-direction: column-reverse;
     }
+    div.column:nth-child(2) > div:nth-child(1) > a:nth-child(5), div.column:nth-child(2) > div:nth-child(1) > span:nth-child(7), .signin input, .signup input, div.column:nth-child(2) > div:nth-child(2) > span:nth-child(6){
+        font-size: 20px;
+    }
+    button.signin-submit:nth-child(6), button.signin-submit:nth-child(5){
+        font-size: 20px;
+    }
+    .close{
+        font-size: 40px;
+        margin-right: -50px;
+    }
+    .main-wrapper div div h2{
+        font-size: 37px;
+    }
+    div.blackback:nth-child(7) > div:nth-child(1) > h2:nth-child(2){
+        font-size: 34px;
+    }
+    .contactusbutton{
+        font-size: 28px;
+    }
+    .contactusbox{
+        flex-direction: column;
+    }
+    .vl{
+        margin-right: 0px;
+        border-left: 0px solid #96b5c0;
+        border-bottom: 3px solid #96b5c0;
+        height: 0px;
+        width: 600px;
+        margin-bottom: 40px;
+    }
+    .emailinfo{
+        margin: 0px 10px;
+    }
+    .emailinfo > div:nth-child(3) > p:nth-child(1), .phoneinfo > div:nth-child(3) > p:nth-child(1){
+        margin: 0px 10px;
+    }
+    .emailinfo > div:nth-child(1) > img:nth-child(1){
+        padding-top: 20px;
+        width: 60px;
+        height: 44px;
+    }
+    .phoneinfo > div:nth-child(1) > img:nth-child(1){
+        width: 55px;
+        height: 55px;
+    }
+    .emailinfo > div:nth-child(2) > h3:nth-child(1), .phoneinfo > div:nth-child(2) > h3:nth-child(1){
+        font-size: 30px;
+    }
+    .contact-right > h2:nth-child(1){
+        font-size: 40px;
+    }
+    #name, #email, #message{
+        font-size: 25px;
+    }
+    div.input-box:nth-child(1), div.input-box:nth-child(2), div.input-box:nth-child(3) {
+        padding-bottom: 20px;
+    }
+    #newsletterform .error{
+        padding: 13px 10px;
+        color: rgb(196, 74, 74);
+        font-size: 30px;
+        height: 26px;
+    }
+    .contact-right .button button[type="submit"]{
+        padding: 10px 20px;
+        font-size: 25px;
+    }
+    div.input-box:nth-child(2) > div:nth-child(2), div.input-box:nth-child(1) > div:nth-child(2), div.input-box:nth-child(3) > div:nth-child(2){
+        font-size: 20px;
+        height: 26px;
+    }
+    .signin .error{
+        font-size: 23px;
+        padding-left: 25px;
+        padding-bottom: 25px;
+    }
+    .logo > a:nth-child(1) > img:nth-child(1){
+        margin: 20px 0px;
+        height: 130px;
+        width: 130px;
+    }
+    .logo > a:nth-child(1) > img:nth-child(2){
+        margin: 38px 0px;
+        height: 89px;
+        width: 350px;
+    }
+    .footer{
+        height: 500px;
+    }
+    .footer .footer-bottom {
+        background-color: rgb(121, 121, 121);
+        height: 30px;
+        width: 100%;
+        text-align: center;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 10px;
+        font-size: 23px;
+    }
+    nav{
+        height: 200px;
+    }
+    .dropdown{
+        display: block;
+        float: right;
+        margin: 75px 70px;
+    }
+    .dropdown.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .dropdown.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .dropdown.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .dropdown.active .bar:nth-child(4){
+        opacity: 0;
+    }
+    .nav-item.nav-link:hover{
+    }
+    .nav-menu{
+        display: flex;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin-top: 110px;
+    }
+    .nav-item{
+        margin: 50px 0px;
+    }
+    li.nav-item:nth-child(5){
+        margin-bottom: 100px;
+    }
+    .nav-link{
+        font-size: 30px;
+    }
+    li.nav-item:nth-child(1) > a:nth-child(1):hover{
+        text-shadow: 0 0 10px rgb(255, 239, 170), 0 0 15px rgb(255, 248, 209), 0 0 20px rgb(105, 98, 77), 0 0 25px rgb(105, 98, 77), 0 0 30px rgb(105, 98, 77), 0 0 35px rgb(105, 98, 77), 0 0 40px rgb(105, 98, 77);
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+  }
+  @media (max-width: 960px){
+    .dropdown{
+        display: block;
+        float: right;
+        margin: 25px 70px;
+    }
+    .dropdown.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .dropdown.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .dropdown.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .dropdown.active .bar:nth-child(4){
+        opacity: 0;
+    }
+    .nav-menu{
+        display: flex;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+    .nav-item{
+        margin: 6px 0px;
+    }
+    li.nav-item:nth-child(5){
+        margin-bottom: 30px;
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+    .nav-item.nav-link:hover{
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+    li.nav-item:nth-child(1) > a:nth-child(1):hover{
+        text-shadow: 0 0 10px rgb(255, 239, 170), 0 0 15px rgb(255, 248, 209), 0 0 20px rgb(105, 98, 77), 0 0 25px rgb(105, 98, 77), 0 0 30px rgb(105, 98, 77), 0 0 35px rgb(105, 98, 77), 0 0 40px rgb(105, 98, 77);
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    .makeachange-section-container{
+        flex-direction: column;
+    }
+    .why-section{
+        flex-direction: column;
+    }
+    .bar{
+        display: block;
+        width: 35px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+    
   }
    
   /* For Mobile Landscape View */
   @media screen and (max-device-width: 640px)
   and (orientation: landscape) {
-    p{
-        font-weight: 300;
-        font-size: 26px;
-    }
-    .abouttext p{
-        font-size: 20px;
-    }
-    h1{
-        font-size: 30px;
-    }
-    .popup-container{
-        width: 80%;
-        flex-direction: column-reverse;
-    }
+
   }
    
   /* For Mobile Phones Portrait or Landscape View */
   @media screen and (max-device-width: 640px) {
-    p{
-        font-weight: 300;
-        font-size: 26px;
-    }
-    .abouttext p{
-        font-size: 20px;
-    }
+
   }
